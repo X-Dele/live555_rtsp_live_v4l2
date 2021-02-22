@@ -35,7 +35,7 @@ typedef unsigned short  uint16_t;
 typedef int  int32_t;
 typedef unsigned   uint32_t;
 //typedef long long  int64_t;
-typedef unsigned long long   uint64_t;
+//typedef unsigned long long   uint64_t;
 
 /* 7.18.1.2  Minimum-width integer types */
 typedef signed char int_least8_t;

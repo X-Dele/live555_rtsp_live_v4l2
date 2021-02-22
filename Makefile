@@ -1,9 +1,6 @@
-INCLUDES 	 = -I./include/live555/usageEnvironment/ -I./include/live555/groupsock/ \
-				-I./include/live555/liveMedia/ -I./include/live555/basicUsageEnvironment \
-				-I./include/x264 -I./include/encoder
-LIVE555_LIBS =  ./lib/livelib/libliveMedia.a ./lib/livelib/libgroupsock.a \
-				./lib/livelib/libBasicUsageEnvironment.a ./lib/livelib/libUsageEnvironment.a
-X264_LIBS 	 =  ./lib/x264lib/libx264.a ./lib/x264lib/libx264.so.148
+INCLUDES 	 = -I/usr/local/include/liveMedia -I/usr/local/include/UsageEnvironment -I/usr/local/include/groupsock -I/usr/local/include/BasicUsageEnvironment -I/usr/local/include -I./include/encoder
+LIVE555_LIBS =  -lliveMedia -lgroupsock -lBasicUsageEnvironment -lUsageEnvironment -lssl -lcrypto
+X264_LIBS 	 =  -lx264 /usr/local/lib/libx264.so.161
 LIBS         =  $(LIVE555_LIBS) $(X264_LIBS)
 
 COMPILE_OPTS =      $(INCLUDES) -I. -O2 -DSOCKLEN_T=socklen_t -D_LARGEFILE_SOURCE=1 -D_FILE_OFFSET_BITS=64 -g
